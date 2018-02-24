@@ -16,8 +16,8 @@ class LineUsSocket {
     out.println(command)
   }
 
-  def receive(): Unit = {
+  def receive(): String = {
     lazy val in = new BufferedSource(lineUs.getInputStream()).getLines()
-    println("Received: " + in.next())
+    in.next()
   }
 }
